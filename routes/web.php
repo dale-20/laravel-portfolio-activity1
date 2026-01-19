@@ -7,10 +7,10 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
-    $name = 'Laureto, Christian Dale'; 
+    $name = 'Laureto, Christian Dale';
     $course = 'Bachelor of Science in Information Technology';
-    $university = 'Central Mindanao University'; 
- 
+    $university = 'Central Mindanao University';
+
     return view('about', [
         'name' => $name,
         'course' => $course,
@@ -20,9 +20,9 @@ Route::get('/about', function () {
 
 Route::get('/projects', function () {
     $projects = [
-        ['title' => 'TowerBound', 'description' => 'A text-adventure game'],
-        ['title' => 'PetCare', 'description' => 'An information system for a veterinary clinic'],
-        ['title' => 'BirdVsPipe', 'description' => 'Just a flappy bird clone done in Unity Engine'],
+        ['title' => 'Project 1', 'description' => 'My first web project'],
+        ['title' => 'Project 2', 'description' => 'E-commerce website'],
+        ['title' => 'Project 3', 'description' => 'Mobile app design'],
     ];
     return view('projects', ['projects' => $projects]);
 })->name('projects');
