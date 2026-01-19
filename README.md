@@ -54,7 +54,11 @@ php artisan serve
 - Passing data from routes to views
 - Working with Git and GitHub
 ## Screenshots
-[Add your screenshots here]
+![Laravel Welcome Page](screenshots/laravel_welcome_page.png)
+![Home](screenshots/home.png)
+![About](screenshots/about.png)
+![Projects](screenshots/projects.png)
+![Contact](screenshots/contact.png)
 ## License
 This project was created for educational purposes.
 ## Acknowledgments
