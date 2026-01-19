@@ -22,7 +22,7 @@ including routing, views, and Blade templates.
 ## Installation
 1. Clone this repository
 ```bash
-git clone https://github.com/YOUR-USERNAME/laravel-portfolio-activity1.git
+git clone https://github.com/dale-20/laravel-portfolio-activity1.git
 ```
 2. Navigate to project directory
 ```bash
