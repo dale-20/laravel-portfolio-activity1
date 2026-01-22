@@ -1,10 +1,11 @@
+<!-- Updated layout.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'My Portfolio')</title>
+    <title>@yield('title', 'Christian Dale Laureto - Portfolio')</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -12,75 +13,277 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        html, body {
+            height: 100%;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background: #f4f4f4;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: #e0e0e0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         nav {
-            background: #333;
-            color: white;
+            background: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(10px);
             padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4babeb;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
 
         nav a {
-            color: white;
+            color: #a0d5f1;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         nav a:hover {
+            color: #ffffff;
+            background: rgba(75, 171, 235, 0.1);
+            transform: translateY(-2px);
+        }
 
-            color: #3498db;
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #4babeb;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 70%;
         }
 
         .container {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            flex: 1;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
-            color: #333;
-            margin-bottom: 1rem;
+            color: #4babeb;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #4babeb, #2e5885);
+            border-radius: 2px;
+        }
+
+        h2 {
+            color: #71b6e3;
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #88c1f4;
+            margin: 1rem 0;
+            font-weight: 500;
         }
 
         footer {
             text-align: center;
             padding: 2rem;
-            background: #333;
+            background: rgba(30, 30, 30, 0.95);
+            color: #a0d5f1;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #a0d5f1;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            background: rgba(75, 171, 235, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Card styles */
+        .card {
+            background: rgba(40, 40, 40, 0.6);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #4babeb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #4babeb, #2e5885);
             color: white;
-            margin-top: 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(75, 171, 235, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
-
 <body>
     <nav>
-        <ul>
-            <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('about') }}">About</a></li>
-            <li><a href="{{ route('projects') }}">Projects</a></li>
-            <li><a href="{{ route('contact') }}">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="{{ route('home') }}" class="logo">
+                <i class="fas fa-code"></i>
+                <span>CDL Portfolio</span>
+            </a>
+            <ul>
+                <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="{{ route('about') }}"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="{{ route('projects') }}"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="{{ route('contact') }}"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="{{ route('hobbies') }}"><i class="fas fa-heart"></i> Hobbies</a></li>
+            </ul>
+        </div>
     </nav>
+    
     <div class="container">
         @yield('content')
     </div>
+    
     <footer>
-        <p>&copy; {{ date('Y') }} My Portfolio. All rights reserved.</p>
-
+        <div class="social-links">
+            <a href="https://www.facebook.com/christian.dale.20" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:s.laureto.christiandale@cmu.edu.ph" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+639630962494" title="Phone">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://github.com/dale-20" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p style="color: #88c1f4; font-size: 0.9rem; margin-top: 1rem;">
+            <i class="fas fa-map-marker-alt"></i> Central Mindanao University
+        </p>
+        <p style="margin-top: 0.5rem; color: #a0d5f1;">
+            &copy; {{ date('Y') }} Christian Dale Laureto. All rights reserved.
+        </p>
     </footer>
 </body>
-
 </html>
