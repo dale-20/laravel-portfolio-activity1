@@ -12,17 +12,17 @@
         <div class="card" style="max-width: 800px; margin: 2rem auto; text-align: left;">
             <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 200px;">
-                    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/615289799_2028739974649038_468332138528043157_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEN-z7srYLr_YJvinL_WZX8er2Ns53kOC16vY2zneQ4LbM7dBymxv6p4Zp1lHg-MpqqdB3_I5JnJITDWwS7TvMX&_nc_ohc=qZNoJ-PCyekQ7kNvwEc_7N1&_nc_oc=AdkatER9XT2DWiu8fp9QjC-VT8qPDjUE-4Eaw9h_sIqLFV2VgG2Ghk8-_KTdRpQtFV0&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=fXFRbfed8ec4hnG75fn7dg&oh=00_Afqn2kxVgY5pLkzQyZaJX5Wpg6u5_hBfd9A6C5dVGTn0FQ&oe=6977B105" 
+                    <img src="{{ asset('images/ako_images/ako.JPG') }}" 
                          alt="Christian Dale Laureto" 
                          style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                 </div>
                 <div style="flex: 2; min-width: 300px;">
-                    <h2 style="color: #4babeb;">Christian Dale Laureto</h2>
+                    <h2 style="color: #4babeb;">{{$name}}</h2>
                     <p style="color: #71b6e3; margin-bottom: 0.5rem;">
-                        <i class="fas fa-graduation-cap"></i> BS Information Technology Student
+                        <i class="fas fa-graduation-cap"></i> {{$course}}
                     </p>
                     <p style="color: #88c1f4;">
-                        <i class="fas fa-university"></i> Central Mindanao University
+                        <i class="fas fa-university"></i> {{ $university }}
                     </p>
                     <p style="margin-top: 1rem; line-height: 1.7;">
                         Passionate about creating innovative web applications with clean code and 

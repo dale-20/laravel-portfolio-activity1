@@ -1,4 +1,3 @@
-<!-- Updated layout.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,7 +246,7 @@
         <div class="nav-container">
             <a href="{{ route('home') }}" class="logo">
                 <i class="fas fa-code"></i>
-                <span>CDL Portfolio</span>
+                <span>CD20/1</span>
             </a>
             <ul>
                 <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> Home</a></li>

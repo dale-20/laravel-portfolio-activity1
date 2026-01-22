@@ -1,4 +1,3 @@
-<!-- Updated about.blade.php -->
 @extends('layout')
 @section('title', 'About Me - Christian Dale Laureto')
 @section('content')
@@ -7,7 +6,7 @@
     <div class="card">
         <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 250px; text-align: center;">
-                <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/615289799_2028739974649038_468332138528043157_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEN-z7srYLr_YJvinL_WZX8er2Ns53kOC16vY2zneQ4LbM7dBymxv6p4Zp1lHg-MpqqdB3_I5JnJITDWwS7TvMX&_nc_ohc=qZNoJ-PCyekQ7kNvwEc_7N1&_nc_oc=AdkatER9XT2DWiu8fp9QjC-VT8qPDjUE-4Eaw9h_sIqLFV2VgG2Ghk8-_KTdRpQtFV0&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=fXFRbfed8ec4hnG75fn7dg&oh=00_Afqn2kxVgY5pLkzQyZaJX5Wpg6u5_hBfd9A6C5dVGTn0FQ&oe=6977B105"
+                <img src="{{ asset('images/ako_images/ako2.jpg') }}"
                     alt="Christian Dale Laureto"
                     style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3);">
             </div>

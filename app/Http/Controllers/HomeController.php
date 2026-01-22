@@ -9,6 +9,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view("home");
+        $name = "Christian Dale Laureto";
+        $university = "Central Mindanao University";
+        $course = "BS Information Technology Student";
+        
+        return view("home", [
+            "name"=> $name,
+            "university"=> $university,
+            "course"=> $course
+        ]);
     }
 }

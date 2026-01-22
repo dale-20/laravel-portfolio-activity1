@@ -10,10 +10,10 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = [
-            ['title' => 'Project 1', 'description' => 'My first web project'],
-            ['title' => 'Project 2', 'description' => 'E-commerce website'],
-            ['title' => 'Project 3', 'description' => 'Mobile app design'],
-            ['title' => 'Project 4', 'description' => 'A text adventure game'],
+            ['title' => 'Tower Bound', 'description' => 'A text_adventure game',  'image' => 'tower_bound_icon.png', 'tools'=> ['Java', 'Android Studio', 'SQLite']],
+            ['title' => 'Pet Care', 'description' => 'An infomation management system for a veterinary clinic', 'image' => 'pet_care_icon.png', 'tools'=> ['PHP', 'Bootstrap' ,'MySQL']],
+            ['title' => 'TrackMyRun', 'description' => 'A mobile run traker application', 'image' => 'run_logo.png', 'tools'=> ['Java', 'Android Studio', 'MySQL']],
+            ['title' => 'Smart Budget', 'description' => 'An expense traking application for mobile', 'image' => 'smart_budget_icon.png', 'tools'=> ['Flutter', 'Dart', 'SQLite']],
         ];
         return view('projects', ['projects' => $projects]);
 
