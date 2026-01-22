@@ -22,7 +22,7 @@ including routing, views, and Blade templates.
 ## Installation
 1. Clone this repository
 ```bash
-git clone https://github.com/YOUR-USERNAME/laravel-portfolio-activity1.git
+git clone https://github.com/dale-20/laravel-portfolio-activity1.git
 ```
 2. Navigate to project directory
 ```bash
@@ -54,7 +54,11 @@ php artisan serve
 - Passing data from routes to views
 - Working with Git and GitHub
 ## Screenshots
-[Add your screenshots here]
+![Laravel Welcome Page](screenshots/laravel_welcome_page.png)
+![Home](screenshots/home.png)
+![About](screenshots/about.png)
+![Projects](screenshots/projects.png)
+![Contact](screenshots/contact.png)
 ## License
 This project was created for educational purposes.
 ## Acknowledgments
