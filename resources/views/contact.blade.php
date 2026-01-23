@@ -41,10 +41,10 @@
             </div>
             <h3>Location</h3>
             <p style="margin: 1rem 0; color: #71b6e3; font-size: 1.1rem;">
-                Central Mindanao University
+                {{ $university }}
             </p>
             <p style="color: #a0d5f1; font-size: 0.9rem;">
-                Mindanao, Philippines
+                {{ $location }}
             </p>
         </div>
     </div>

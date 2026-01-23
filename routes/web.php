@@ -1,14 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\HobbyController;
+use App\Http\Controllers\PageController;
 
-Route::get('/', [HomeController::class,'index'])->name('home');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get("/projects", [ProjectController::class, 'index'])->name('projects');
-Route::get("/contact", [ContactController::class, 'index'])->name('contact');
-Route::get("/hobbies", [HobbyController::class, 'index'])->name('hobbies');
+Route::get('/', [PageController::class,'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get("/projects", [PageController::class, 'projects'])->name('projects');
+Route::get("/contact", [PageController::class, 'contact'])->name('contact');
+Route::get("/hobbies", [PageController::class, 'hobbies'])->name('hobbies');
